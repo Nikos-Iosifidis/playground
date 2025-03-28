@@ -3,6 +3,8 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { providePrimeNG } from 'primeng/config';
 import Aura from '@primeng/themes/aura';
 import { definePreset } from '@primeng/themes';
+import { routes } from './app.routes';
+import { provideRouter } from '@angular/router';
 
 const MyPreset = definePreset(Aura, {
   components: {
@@ -42,6 +44,6 @@ export const appConfig: ApplicationConfig = {
         },
       },
     }),
-    // provideRouter(routes),
+    provideRouter(routes),
   ],
 };
